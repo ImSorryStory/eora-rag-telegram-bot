@@ -21,34 +21,34 @@
 
 ## Репозиторий: структура
 
-.  
-├── app/  
-│   ├── main.py                 # Telegram-бот (python-telegram-bot v21+)  
-│   ├── rag_pipeline.py         # RAG: retrieval + генерация с цитатами  
-│   ├── ingest.py               # Индексация локальных файлов и/или URL eora.ru  
-│   ├── web_scraper.py          # Небольшой краулер страниц (eora.ru)  
-│   ├── store.py                # FAISS + метаданные (JSONL)  
-│   ├── llm.py                  # Обертка над OpenAI (и заготовка для GigaChat)  
-│   ├── prompts.py              # Системные промпты и шаблоны  
-│   ├── config.py               # Настройки через env (Pydantic)  
-│   └── utils.py                # Утилиты (chunking, токены, очистка HTML)  
-├── data/  
-│   ├── sources/                # (опционально) распакованный архив с файлами  
-│   ├── index.faiss             # (создается) FAISS индекс эмбеддингов  
-│   └── chunks.jsonl            # (создается) метаданные чанков/источников  
-├── eval/  
-│   ├── qa_pairs.yaml           # Мини-набор вопросов для самопроверки  
-│   └── evaluate.py             # Быстрая оценка (ключевые слова + опц. LLM‑grader)  
-├── ops/  
-│   └── docker-compose.yml      # (опционально) webhook через reverse proxy  
-├── scripts/  
-│   └── run_local.sh            # Быстрый старт локально  
-├── links.txt                   # Список ссылок eora.ru  
-├── .env.example                # Шаблон переменных окружения  
-├── .gitignore                    
-├── Dockerfile  
-├── pyproject.toml                
-└── README.md                     
+.   
+├── app/   
+│   ├── main.py                 # Telegram-бот (python-telegram-bot v21+)   
+│   ├── rag_pipeline.py         # RAG: retrieval + генерация с цитатами   
+│   ├── ingest.py               # Индексация локальных файлов и/или URL eora.ru   
+│   ├── web_scraper.py          # Небольшой краулер страниц (eora.ru)   
+│   ├── store.py                # FAISS + метаданные (JSONL)   
+│   ├── llm.py                  # Обертка над OpenAI (и заготовка для GigaChat)   
+│   ├── prompts.py              # Системные промпты и шаблоны   
+│   ├── config.py               # Настройки через env (Pydantic)   
+│   └── utils.py                # Утилиты (chunking, токены, очистка HTML)   
+├── data/   
+│   ├── sources/                # (опционально) распакованный архив с файлами   
+│   ├── index.faiss             # (создается) FAISS индекс эмбеддингов   
+│   └── chunks.jsonl            # (создается) метаданные чанков/источников   
+├── eval/   
+│   ├── qa_pairs.yaml           # Мини-набор вопросов для самопроверки   
+│   └── evaluate.py             # Быстрая оценка (ключевые слова + опц. LLM‑grader)   
+├── ops/   
+│   └── docker-compose.yml      # (опционально) webhook через reverse proxy   
+├── scripts/   
+│   └── run_local.sh            # Быстрый старт локально   
+├── links.txt                   # Список ссылок eora.ru   
+├── .env.example                # Шаблон переменных окружения   
+├── .gitignore   
+├── Dockerfile   
+├── pyproject.toml   
+└── README.md   
 
 ---
 
@@ -114,3 +114,4 @@ python -m app.main
 - Ограничение доменов скрапера (ALLOWED_DOMAINS).
 
 - Типизация, линтер (ruff), изоляция зависимостей.
+
