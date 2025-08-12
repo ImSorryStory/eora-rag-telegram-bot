@@ -1,0 +1,37 @@
+[project]
+name = "eora-rag-telegram-bot"
+version = "0.1.0"
+description = "RAG поверх материалов EORA + Telegram-бот с инлайн-ссылками на источники"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+
+[project.dependencies]
+pydantic-settings = "^2.5.2"
+PyYAML = "^6.0.1"
+openai = "^1.40.0"
+python-telegram-bot = ">=21.7"
+faiss-cpu = "^1.8.0"
+beautifulsoup4 = "^4.12.3"
+requests = "^2.32.3"
+pydantic = "^2.7.4"
+tiktoken = "^0.7.0"
+pypdf = "^4.3.1"
+docx2txt = "^0.8"
+rapidfuzz = "^3.9.6"
+urllib3 = "^2.2.2"
+
+[tool.ruff]
+line-length = 100
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.pyright]
+reportMissingTypeStubs = false
+pythonVersion = "3.12"
+
+[tool.setuptools]
+py-modules = []
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
